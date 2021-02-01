@@ -2,11 +2,9 @@ ABOUTBOX DIALOG LOADONCALL MOVEABLE DISCARDABLE 32, 28, 208, 144
 CAPTION "About"
 STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | DS_MODALFRAME | WS_POPUP
 BEGIN
-    CONTROL "Bible4W (TM)", -1, "static", SS_CENTER | WS_GROUP | WS_CHILD, 70, 8, 116, 8
-    CONTROL "Copyright (c) 1991,1992,1993, Nehemiah Ministries", -1, "static", SS_CENTER | WS_GROUP | WS_CHILD, 52, 20, 150, 8
+    CONTROL "Bible4W", -1, "static", SS_CENTER | WS_GROUP | WS_CHILD, 70, 8, 116, 8
     CONTROL "Bible4w", -1, "static", SS_ICON | WS_CHILD, 18, 10, 32, 32
     CONTROL "OK", IDCOLORS_POS, "button", BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP | WS_CHILD, 86, 118, 38, 14
     CONTROL "This program may be copied and distributed free of charge.  See the README.TXT file for license information.", 104, "static", SS_LEFT | WS_CHILD, 16, 64, 176, 28
     CONTROL "Version 1.2", 107, "static", SS_CENTER | WS_CHILD, 68, 44, 116, 8
-    CONTROL "P.O. Box 46964, Seattle Wa., 98146", 106, "static", SS_CENTER | WS_CHILD, 54, 32, 146, 10
 END

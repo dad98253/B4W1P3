@@ -2,7 +2,6 @@
 #pragma message( "File last modified on " __TIMESTAMP__ )
 #pragma message( "  ")
 #pragma title( "Bible4W version 3.0" )
-#pragma subtitle( "Copyright (c) 1989 - 1995, Nehemiah Ministries, Inc." )
 #pragma comment( compiler )
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ ".  Last modified on " __TIMESTAMP__ )
 

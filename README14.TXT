@@ -368,36 +368,6 @@ forced to re-boot!  This problem will be corrected in a future release
 of Bible4W.
 
 
-
-
-Terms of Use:
-
-
-Bible4W is copyrighted by Nehemiah Ministries, Incorporated.  The terms of 
-your license to use Bible4W are as follows:
-
-1.	 You may use Bible4W for any purpose you wish, as long as you use it for 
-the glory of God.
-
-2.	 You may not sell Bible4W, but may distribute it freely to anyone you 
-wish. You do not need permission to distribute it - just do so.  All 
-commercial and retail rights are reserved by the copyright holder.  Those 
-distributing Bible4W may request a charge not exceeding $5 a disk, to 
-cover costs.  If you are a shareware distributor, please send Nehemiah 
-Ministries a letter indicating that you are distributing Bible4W.  If you 
-do so, Nehemiah Ministries will include your name, address, and pertinent 
-price information in the appendix at the end of this README file.
-
-3.	 You may not distribute copies of Bible4W that have been added to or 
-altered in anyway without written permission.  When requesting such 
-permission, you must send Nehemiah Ministries a copy of your changes for 
-approval.
-
-If you find Bible4W useful, consider making a donation to your favorite 
-evangelical organization.  If you do not have one, please give a gift to the 
-Gideons.  Please be generous.  The development costs of Bible4W are 
-underwritten by Nehemiah Ministries Inc.
-
 For Additional Help...
 If you have any problems or suggestions, please contact us.  Your 
 constructive criticism, prayers, and letters of encouragement will be 

@@ -339,48 +339,7 @@ installing Bible4W on a 16 bit network product (such as Windows for
 Workgroups) and the network connection is broken, your machine will 
 hang and you may be forced to re-boot!
 
-Terms of Use:
-
-
-Bible4W is owned and copyrighted by John C. Kuras and is protected by United 
-States copyright laws and international treaty provisions.  The terms of 
-your license to use Bible4W are as follows:
-
-1.	 You may use Bible4W for any purpose you wish, as long as you use it for 
-the glory of God.
-
-2.	 You may distribute Bible4W freely to anyone you wish. You do not need 
-permission to distribute it - just do so.  No commercial or retail rights 
-are reserved by the copyright holder.  Those distributing Bible4W are 
-permitted to request a reimbursement over and above their costs incurred 
-in the distribution of the product.  If you are a shareware distributor, 
-please send Nehemiah Ministries a letter indicating that you are 
-distributing Bible4W.  If you do so, Nehemiah Ministries will include 
-your name, address, and pertinent price information in the appendix at 
-the end of this README file.
-
-3.	 You may not distribute copies of Bible4W that have been added to or 
-altered in anyway without written permission.  When requesting such 
-permission, you must send Nehemiah Ministries a copy of your changes for 
-approval.  An unaltered copy of this README.TXT file (or a modified copy 
-thereof which has been approved by Nehemiah Ministries) must be included 
-with all copies of Bible4W.
-
-4.	You may not rent or lease this software.  However, you may duplicate or 
-transfer the software and its accompanying files subject to the 
-conditions set forth in this agreement.  You may not reverse engineer, 
-decompile, or disassemble the software.  You are also not permitted to 
-publish or provide such information to others.
-
-5.	"Bible4W" is a trademark of John C. Kuras.  Prior to January 1, 1994, 
-"Bible4W" and "Bible for Windows" were trademarks of Nehemiah Ministries, 
-Inc.  The previous name for this product, "Bible for Windows", was 
-changed per Microsoft's published request at the July 1992 Windows/NT 
-Developers Conference.  This name change does not imply agreement with 
-Microsoft's claim regarding the use of the term "Windows" in non-
-Microsoft products and trademarks.
-
-6.	These files are provided "as is", and no warranty of any kind is 
+	These files are provided "as is", and no warranty of any kind is 
 provided.  Standard good programming and testing practices have been 
 employed to attempt to assure bug free operation of the programs.  
 However, as with all software products, there can be no guarantee that 
@@ -412,37 +371,18 @@ the Government is subject to restrictions as set forth in subparagraph
 (c)(1)(ii) of The Rights in Technical Data and Computer Software clause 
 at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) of the Commercial 
 Computer Software--Restricted Rights 48 CFR 52.227-19, as applicable.  
-The Manufacturer is John C. Kuras/140 Brakel Ln./Media PA 19063.
+The Manufacturer is John C. Kuras.
 
 	If this product is acquired in the United States, this Agreement is 
 governed by the laws of the State of Pennsylvania.  If you have any 
 questions concerning this Agreement, or if you desire to contact John 
-Kuras for any reason, please write:  John C. Kuras/140 Brakel Ln./Media 
-PA 19063.
+Kuras for any reason, please write:  
 
-
-
-If you find Bible4W useful, please send $35 to:
-
-John C. Kuras
-140 Brakel Ln
-Media, PA 19063
-
-The development costs of Bible4W were underwritten totally by John C. Kuras.  
-Your remuneration will be gratefully appreciated, and will help provide the 
-resources necessary to continue maintaining and enhancing this product.  If 
-you cannot afford the $35, then please remember us in your prayers.
 
 For Additional Help...
 If you have any problems or suggestions, please contact us.  Your 
 constructive criticism, prayers, and letters of encouragement will be 
 greatly appreciated.
-
-Please mail any correspondence to:
-
-John C. Kuras
-140 Brakel Ln
-Media, PA 19063
 
 If you wish, you can leave an electronic message for John Kuras through 
 Compuserve by sending e-mail to: [70062,3504], or through internet at: 
@@ -452,7 +392,8 @@ Note: the SysOp of the El Shaddia Bulletin Board ((206)941-5282) has set up
 a special conference area for Bible4W.  You may be able to get the help that 
 you need quicker by posting an open message there first!  I do not log onto 
 Compuserve on a regular basis.
-King James Bible Notes
+
+King James Bible Notes:
 
 Please notify John Kuras of any errors you find in the text.  The following 
 deviations from the King James text are known:

@@ -1,0 +1,33 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "BWINDLG.H\0"
+END
+
+DlgKeypad DIALOG LOADONCALL MOVEABLE DISCARDABLE 91, 58, 88, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Keypad"
+FONT 10, "System"
+
+BEGIN
+    CONTROL         "Cancel", DLGKEYPADCANCEL, "Button", WS_TABSTOP, 42, 28, 
+                    46, 14
+    CONTROL         "#", DLGKEYPADPOUND, "Button", WS_DISABLED, 28, 42, 14, 
+                    14
+    CONTROL         "1", DLGKEYPAD1, "Button", WS_TABSTOP, 0, 0, 14, 14
+    CONTROL         "2", DLGKEYPAD2, "Button", WS_TABSTOP, 14, 0, 14, 14
+    CONTROL         "3", DLGKEYPAD3, "Button", WS_TABSTOP, 28, 0, 14, 14
+    CONTROL         "4", DLGKEYPAD4, "Button", WS_TABSTOP, 0, 14, 14, 14
+    CONTROL         "5", DLGKEYPAD5, "Button", WS_TABSTOP, 14, 14, 14, 14
+    CONTROL         "6", DLGKEYPAD6, "Button", WS_TABSTOP, 28, 14, 14, 14
+    CONTROL         "7", DLGKEYPAD7, "Button", WS_TABSTOP, 0, 28, 14, 14
+    CONTROL         "8", DLGKEYPAD8, "Button", WS_TABSTOP, 14, 28, 14, 14
+    CONTROL         "9", DLGKEYPAD9, "Button", WS_TABSTOP, 28, 28, 14, 14
+    CONTROL         "0", DLGKEYPAD0, "Button", WS_TABSTOP, 14, 42, 14, 14
+    CONTROL         "*", DLGKEYPADASKT, "Button", WS_DISABLED, 0, 42, 14, 14
+    CONTROL         "<Backspace", DLGKEYPADBKSP, "Button", WS_TABSTOP, 42, 0, 
+                    46, 14
+    CONTROL         "Tab", DLGKEYPADTAB, "Button", WS_TABSTOP, 42, 14, 46, 
+                    14
+    CONTROL         "Enter", DLGKEYPADENTER, "Button", WS_TABSTOP, 42, 42, 
+                    46, 14
+END

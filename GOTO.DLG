@@ -1,0 +1,38 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "BWINDLG.H\0"
+END
+
+GOTOBOX DIALOG 48, 52, 148, 88
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Go To Verse..."
+BEGIN
+    CONTROL         "Book :", DLGGOTOBKTEXT, "Static", SS_RIGHT, 2, 10, 32, 
+                    10
+    CONTROL         "Chapter :", DLGGOTOCHAPTXT, "Static", SS_RIGHT, 2, 28, 
+                    32, 12
+    CONTROL         "OK", IDCOLORS_POS, "Button", BS_DEFPUSHBUTTON | 
+                    WS_TABSTOP, 12, 68, 46, 14
+    CONTROL         "", DLGGOTOCHAPEDIT, "Edit", ES_LOWERCASE | WS_BORDER | 
+                    WS_TABSTOP | 0x0200, 40, 26, 24, 14
+    CONTROL         "", DLGGOTOVEREDIT, "Edit", ES_LOWERCASE | WS_BORDER | 
+                    WS_TABSTOP | 0x0200, 40, 44, 24, 14
+    CONTROL         "Verse :", DLGGOTOVERTXT, "Static", SS_RIGHT | WS_GROUP, 
+                    2, 46, 32, 12
+    CONTROL         "", DLGGOTOCHAPMAX, "Static", SS_CENTER | WS_GROUP, 4, 
+                    36, 30, 8
+    CONTROL         "", DLGGOTOVERMAX, "Static", SS_CENTER | WS_GROUP, 4, 54, 
+                    30, 8
+    CONTROL         "Books >>", DLGGOTOBOOKBTN, "Button", WS_TABSTOP, 82, 8, 
+                    46, 14
+    CONTROL         "Keypad >>", DLGGOTOKEYPAD, "Button", WS_TABSTOP, 82, 36, 
+                    46, 14
+    CONTROL         "&Cancel", IDSTATES_POS, "Button", WS_TABSTOP, 82, 68, 
+                    46, 14
+    CONTROL         "", DLGGOTOCHAPSPIN, "MicroScroll", MSS_VERTICAL , 64, 
+                    26, 8, 14
+    CONTROL         "", DLGGOTOVERSPIN, "MicroScroll", MSS_VERTICAL , 64, 44, 
+                    8, 14
+    CONTROL         "", DLGGOTOBOOKCOMBO, "ComboBox", CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP, 40, 10, 32, 144
+END

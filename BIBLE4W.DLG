@@ -1,0 +1,24 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "BIBLE4W.H\0"
+END
+
+ABOUTBOX DIALOG 44, -18, 230, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About"
+BEGIN
+    CTEXT           "Bible4W \256", -1, 70, 14, 116, 8
+    CTEXT	    "Copyright \251 1989 - 1995, Nehemiah Ministries, Inc.", -1, 44,
+                    26, 168, 8
+    ICON	    "Bible4W_v1.3", -1, 18, 16, 32, 32
+    DEFPUSHBUTTON   "OK", TRUE, 96, 162, 38, 14, WS_GROUP
+    LTEXT           "Please copy and share this program with a friend.  See the README.TXT file for license information.", 
+                    104, 16, 70, 198, 22, NOT WS_GROUP
+    CTEXT	    "Version 3.0", 107, 72, 50, 112, 8, NOT WS_GROUP
+    LTEXT           "If you find this program useful, please send $35 to:", 
+                    201, 16, 96, 199, 12
+    LTEXT	    "Nehemiah Ministries", 202, 92, 118, 114, 8
+    LTEXT           "140 Brakel Lane", 203, 92, 126, 114, 8
+    LTEXT           "Media, PA 19063", 204, 92, 134, 114, 8
+    LTEXT           "U.S.A.", 205, 92, 142, 73, 8
+END

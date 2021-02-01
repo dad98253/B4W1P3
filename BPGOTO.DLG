@@ -1,0 +1,29 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "BWINDLG.H\0"
+END
+
+PenGoToBox DIALOG 12, -10, 174, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Go To Verse..."
+BEGIN
+    RTEXT           "Book :", DLGGOTOBKTEXT, 2, 14, 32, 10, NOT WS_GROUP
+    RTEXT           "Chapter :", DLGGOTOCHAPTXT, 2, 40, 32, 12, NOT WS_GROUP
+    RTEXT           "Verse :", DLGGOTOVERTXT, 2, 66, 32, 12
+    DEFPUSHBUTTON   "OK", IDCOLORS_POS, 28, 94, 46, 14
+    CONTROL         "ALC<4004>", DLGGOTOCHAPEDIT, "bedit", WS_TABSTOP, 40, 
+                    34, 46, 22
+    CONTROL         "ALC<4004>", DLGGOTOVEREDIT, "bedit", WS_TABSTOP, 40, 60, 
+                    46, 22
+    PUSHBUTTON      "Books >>", DLGGOTOBOOKBTN, 114, 8, 46, 14
+    PUSHBUTTON      "Keypad >>", DLGGOTOKEYPAD, 114, 50, 46, 14, WS_DISABLED
+    PUSHBUTTON      "&Cancel", IDSTATES_POS, 102, 94, 46, 14
+    CTEXT           "", DLGGOTOCHAPMAX, 2, 50, 36, 8
+    CTEXT           "", DLGGOTOVERMAX, 6, 76, 32, 8
+    CONTROL         "", DLGGOTOCHAPSPIN, "MicroScroll", MSS_VERTICAL , 88, 
+                    38, 8, 14
+    CONTROL         "", DLGGOTOVERSPIN, "MicroScroll", MSS_VERTICAL , 88, 63, 
+                    8, 14
+    COMBOBOX        DLGGOTOBOOKCOMBO, 40, 12, 34, 131, CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END

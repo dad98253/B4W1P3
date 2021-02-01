@@ -1,0 +1,128 @@
+/****************************************************************************
+ *									    *
+ *  FILE	: Bible4w.rc						    *
+ *									    *
+ *  DESCRIPTION : Resource script file for Bible4W			    *
+ *									    *
+ ****************************************************************************/
+#include <windows.h>
+//#include <windowsx.h>
+#include "bible4w.h"
+
+Bible4W_v1.3	   ICON   bible4w.ico
+
+#include "bible4w.dlg"
+#include "bwFind.dlg"
+#include "bpFind.dlg"
+#include "goto.dlg"
+#include "bpgoto.dlg"
+#include "bkeypad.dlg"
+#include "bbooks.dlg"
+#include "wordlist.dlg"
+
+Bible4W1.3Menu MENU
+BEGIN
+  POPUP		"&File"
+    BEGIN
+       MENUITEM   "E&xit",		IDM_EXIT
+    END
+
+  POPUP         "&Edit"
+    BEGIN
+       MENUITEM   "&Copy",    IDM_COPY
+    END
+
+  POPUP         "&Search"
+    BEGIN
+       MENUITEM   "&Find...",		IDM_FIND
+       MENUITEM   SEPARATOR
+       MENUITEM   "&Go to Verse...",IDM_GOTO
+    END
+
+  POPUP 	"&Options"
+    BEGIN
+       MENUITEM   "List total # &references in word list", IDM_REF_FMT
+    END
+
+  POPUP 	"&Help"
+    BEGIN
+       MENUITEM   "&Index",		IDM_HELP_INDEX
+       MENUITEM   "&Keyboard",		IDM_HELP_KEYBOARD
+       MENUITEM   "&Commands",		IDM_HELP_COMMANDS
+       MENUITEM   "&Procedures",	IDM_HELP_PROCEDURES
+       MENUITEM   "&Using Help",	IDM_HELP_HELP
+       MENUITEM   SEPARATOR
+       MENUITEM   "&About Bible4W...", IDM_ABOUT
+    END
+
+  END
+
+Bible4W_v1.3 ACCELERATORS
+    {
+    VK_INSERT, IDM_COPY,    VIRTKEY,  CONTROL
+    }
+
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+
+IDS_CANTOPENB	    "Cannot open the bible text database file '%s'!"
+IDS_CANTOPENBR	    "Can no longer access the bible text database file '%s'! It has been removed from the drive."
+IDS_CANTOPENBF	    "Can no longer access the bible text database file '%s'!"
+IDS_CANTOPENBN	    "Can no longer access the bible text database file '%s'! The network connection has been broken."
+IDS_ILLEGALWRITE    "Attempt to write to the bible text database file! Program will terminate."
+IDS_CANTOPENS	    "Cannot open the clipboard scratch file '%s'!  Your disk is probably full."
+IDS_CANTOPENSR	    "Can no longer access the clipboard scratch file '%s'! It has been removed from the drive."
+IDS_CANTOPENSF	    "Can no longer access the clipboard scratch file '%s'!"
+IDS_CANTOPENSN	    "Can no longer access the clipboard scratch file '%s'! The network connection has been broken."
+IDS_ABORT	    "Abnormal error condition number '%i'!  Please inform Nehemiah Ministries."
+IDS_SMALLSCREEN     "The display screen is too small to display the Books Dialog box."
+IDS_BADBOOKARG	    "A bad argument was passed to the Books Dialog callback function."
+IDS_CHAPT0	    "Zero is not a valid chapter number!"
+IDS_CANTRECOGNIZE   "SendMessage to recognizer failed!"
+IDS_NOFINDWRD	    "The word entered is not found in the King James Bible!"
+IDS_CANTRECOGBOOK   "SendMessage to book recognizer failed!"
+IDS_CANTRECOGCHAPT  "SendMessage to chapter recognizer failed!"
+IDS_CANTRECOGVER    "SendMessage to verse recognizer failed!"
+IDS_BADBOOK	    "The book abbreviation used is not correct!"
+IDS_BADCHAPT	    "Bad input value in the chapter box!"
+IDS_CHAPT2BIG	    "The chapter requested is greater then the total number of chapters in the book!"
+IDS_BADVERSE	    "Bad input value in the verse box!"
+IDS_VERSE0	    "Zero is not a valid verse number!"
+IDS_VERSE2BIG	    "The verse requested is greater then the total number of verses in the chapter!"
+IDS_BADDATABASE     "The bible text database file has been corrupted.  Re-install Bible4W!"
+IDS_BADHELPFILE     "Problems opening the Bible4W help file!"
+IDS_CANTRESIZE	    "The window cannot be re-sized so large!  Make your window smaller!"
+IDS_CANTGOUP	    "You cannot scroll up any farther!"
+IDS_CANTGODOWN	    "You cannot scroll down any farther!"
+IDS_CANTPAGEUP	    "You cannot page up any farther!"
+IDS_CANTPAGEDOWN    "You cannot page down any farther!"
+IDS_PLISTFULL	    "The pick list is full!  Copy the clipboard to your application, then pick more verses."
+IDS_BADDB2	    "Either the bible text database file has been corrupted, or you are out of memory.  Try closing some applications.  If you are running Windows in real mode, remove all TSR's. If all else fails, re-install Bible4W!"
+IDS_BADDBN          "Bad DatabaseName found in the win.ini file."
+IDS_OUTOFMEM	    "You are out of memory!  Try closing some applications.  If you are running Windows in real mode, remove all TSR's!"
+IDS_PLISTEMPTY	    "The pick list is empty!  You must select some verses first.  See HELP PROCEDURES COPYING TEXT for help."
+IDS_CANTCOMPACT     "Global compact failed!  You are probably low on memory.  Try closing some applications.  If you are running Windows in real mode, remove all TSR's!"
+IDS_CHECKPATH	    "Make sure your PATH contains : %s"
+IDS_CANTREAD	    "Can't read the file '%s'"
+IDS_CANTCREATE	    "Can't create the file '%s'"
+IDS_CANTWRITE	    "Can't write the file '%s'"
+IDS_ILLFNM	    "Invalid filename: '%s'"
+IDS_CANTFIND	    "Can't find '%s'"
+IDS_HELPNOTAVAIL    "Can't load Windows Help application"
+IDS_APPNAME	    "Bible4w"
+IDS_OUTOFCBSPACE    "Can't load the book list into the combo box!  You are probably low on memory.  Try closing some applications.  If you are running Windows in real mode, remove all TSR's!"
+IDS_OWNERLISTBOX    "Problems with the Owner-Drawn ListBox... Propably out of space... last index = %i"
+
+END
+
+words1 WORDS1 LOADONCALL MOVEABLE words1.dat
+
+words2 WORDS2 LOADONCALL MOVEABLE words2.dat
+
+wordsp1 WORDSP1 LOADONCALL MOVEABLE wordsp1.dat
+
+wordsp2 WORDSP2 LOADONCALL MOVEABLE wordsp2.dat
+
+listsizes LISTSIZES LOADONCALL MOVEABLE listsize.dat
+
+END

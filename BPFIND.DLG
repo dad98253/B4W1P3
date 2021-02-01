@@ -1,0 +1,21 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "BWINDLG.H\0"
+END
+
+PENFINDBOX DIALOG 2, 12, 316, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+BEGIN
+    CONTROL         "&Find What:", DLGFINDWHATTEXT, "Static", 
+                    SS_LEFTNOWORDWRAP, 2, 2, 38, 10
+    CONTROL         "ALC<4003>", DLGFINDEDITBOX, "bedit", WS_TABSTOP, 42, 0, 
+                    272, 26
+    PUSHBUTTON      "Word List ( A - J ) >>", DLGFINDWORDLIST1, 6, 34, 73, 
+                    12
+    PUSHBUTTON      "Word List ( K - Z ) >>", DLGFINDWORDLIST2, 82, 34, 75, 
+                    12
+    PUSHBUTTON      "Advanced >>", DLGFINDADVANCED, 160, 34, 50, 12
+    PUSHBUTTON      "Cancel", DLGFINDCANCEL, 214, 34, 46, 12
+    DEFPUSHBUTTON   "OK", DLGFINDOK, 262, 34, 46, 12, WS_GROUP
+END

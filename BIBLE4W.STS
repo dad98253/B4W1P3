@@ -1,0 +1,122 @@
+[shared-]
+	version=2
+	pmark="C:\BIBLE\WIN\B4W1P3\BIBLE4W.C" 954 11
+	project="C:\BIBLE\WIN\B4W1P3\BIBLE4W.MAK"
+	buildmode=3
+[edit-]
+	srch=wordlist
+	fSrchRe=0
+	rpl=
+	src=
+	fRplRe=30464
+	file="C:\BIBLE\WIN\B4W1P3\BIBLE4W.C" 940 1 954 11
+	file="C:\BIBLE\WIN\B4W1P3\BIBLE4W.DEF" 22 1 34 13
+[pwb]
+	screen=25 80
+	winstyle=7
+	wnd=C 2 1 24 80
+[environ]
+	INCLUDE=c:\c600\include;c:\windev\include;
+	LIB=c:\c600\lib;
+	HELPFILES=c:\help;
+[build]
+    build: macro DEBUG "1"
+    build: macro CC "cl"
+    build: macro CFLAGS_G "/W2 /Gw /Zp /BATCH"
+    build: macro CFLAGS_D "/Od /Zi /DDEBUG /Ze"
+    build: macro CFLAGS_R "/Os /Og /Oe /Gs"
+    build: macro MAPFILE_D "NUL"
+    build: macro MAPFILE_R "NUL"
+    build: macro LFLAGS_G " /NOD /STACK:8000  /ST:8000 /BATCH"
+    build: macro LFLAGS_D " /CO /NOF /NOP"
+    build: macro LFLAGS_R " /FAR /PACKC /PACKD"
+    build: macro LLIBS_G "LIBW.LIB slibcew slibce"
+    build: macro LINKER "link"
+    build: macro ILINK "ilink"
+    build: macro LRF "echo > NUL"
+    build: macro RC "rc"
+    build: macro LLIBS_R ""
+    build: macro LLIBS_D "wprintf"
+    build: macro CVFLAGS " /25 /S"
+    build: macro FOR_DEFS ""
+    build: all $(PROJ).exe
+    build: target $(PROJ).exe lrf_exe link_exe rc_exe
+    build: inference .c.sbr cc_c_sbr
+    build: inference .c.obj cc_c_obj
+    build: inference .rc.res rc_rc_res
+    build: release command cc_c_sbr "$(CC) /Zs $(CFLAGS_G) $(CFLAGS_R) /FR$@ $<"
+    build: debug command cc_c_sbr "$(CC) /Zs $(CFLAGS_G) $(CFLAGS_D) /FR$@ $<"
+    build: release command cc_c_obj "$(CC) /c $(CFLAGS_G) $(CFLAGS_R) /Fo$@ $<"
+    build: debug command cc_c_obj "$(CC) /c $(CFLAGS_G) $(CFLAGS_D) /Fo$@ $<"
+    build: release command lrf_exe "$(LRF) @<<$(PROJ).lrf\n$(RT_OBJS: = +^\n) $(OBJS: = +^\n)\n$@\n$(MAPFILE_R)\n$(LLIBS_G: = +^\n) +\n$(LLIBS_R: = +^\n) +\n$(LIBS: = +^\n)\n$(DEF_FILE) $(LFLAGS_G) $(LFLAGS_R);\n<<"
+    build: debug command lrf_exe "$(LRF) @<<$(PROJ).lrf\n$(RT_OBJS: = +^\n) $(OBJS: = +^\n)\n$@\n$(MAPFILE_D)\n$(LLIBS_G: = +^\n) +\n$(LLIBS_D: = +^\n) +\n$(LIBS: = +^\n)\n$(DEF_FILE) $(LFLAGS_G) $(LFLAGS_D);\n<<"
+    build: release command link_exe "$(LINKER) @$(PROJ).lrf"
+    build: debug command link_exe "$(LINKER) @$(PROJ).lrf"
+    build: command rc_exe "$(RC) $(RESS) $@"
+    build: command rc_rc_res "$(RC) /r $<"
+    build: command run "WIN $(PROJ).exe $(RUNFLAGS)"
+    build: command debug "WIN CVW $(CVFLAGS) $(PROJ).exe $(RUNFLAGS)"
+    build: include dependencies
+    build: include no system
+    build: include .c "^[ \t]*#[ \t]*include[ \t]*\"[ \t]*\\(\\:p\\)[ \t]*\"" case
+    build: include .c "^[ \t]*#[ \t]*include[ \t]*<[ \t]*\\(\\:p\\)[ \t]*>" case system
+    build: include .h "^[ \t]*#[ \t]*include[ \t]*\"[ \t]*\\(\\:p\\)[ \t]*\"" case
+    build: include .h "^[ \t]*#[ \t]*include[ \t]*<[ \t]*\\(\\:p\\)[ \t]*>" case system
+    build: include .rc "^[ \t]*rcinclude[ \t]+\\([^ \t]+\\)"
+    build: include .rc "^[ \t]*#[ \t]*include[ \t]*\"[ \t]*\\(\\:p\\)[ \t]*\""
+    build: include .rc "^[ \t]*#[ \t]*include[ \t]*<[ \t]*\\(\\:p\\)[ \t]*>" system
+    build: include .for "^[ \t$][ \t]*[iI][nN][cC][lL][uU][dD][eE][ \t:]*'[ \t]*\\(\\:p\\)[ \t]*'" case
+    build: include .fi "^[ \t$][ \t]*[iI][nN][cC][lL][uU][dD][eE][ \t:]*'[ \t]*\\(\\:p\\)[ \t]*'" case system
+    build: include .fd "^[ \t$][ \t]*[iI][nN][cC][lL][uU][dD][eE][ \t:]*'[ \t]*\\(\\:p\\)[ \t]*'" case system
+    build: include .inc "^[ \t$][ \t]*[iI][nN][cC][lL][uU][dD][eE][ \t:]*'[ \t]*\\(\\:p\\)[ \t]*'" case
+    build: include .asm "^[ \t]*include[ \t]+\\([^ \t]+\\)"
+    build: include .inc "^[ \t]*include[ \t]+\\([^ \t]+\\)"
+    build: include .c "^[ \t]*#[ \t]*include[ \t]*\"\\([^\"]+\\)\"" case
+    build: include .c "^[ \t]*#[ \t]*include[ \t]*<\\([^>]+\\)>" case system
+    build: include .h "^[ \t]*#[ \t]*include[ \t]*\"\\([^\"]+\\)\"" case
+    build: include .h "^[ \t]*#[ \t]*include[ \t]*<\\([^>]+\\)>" case system
+    build: include .rc "^[ \t]*#[ \t]*include[ \t]*\"\\([^\"]+\\)\""
+    build: include .rc "^[ \t]*#[ \t]*include[ \t]*<\\([^>]+\\)>" system
+    build: message "^SYS[0-9][0-9][0-9][0-9]:\\:b"
+    build: message "^NET[0-9][0-9][0-9][0-9]:\\:b"
+    build: message "^\\(\\{\\:p\\!<[^>]*>\\}\\) \\([0-9]+\\) \\([0-9]+\\)[ ]*:" file line col
+    build: message "^\\(\\:p\\):\\([0-9]+\\):" file line
+    build: message "^[^(]+(\\(\\:p\\)) : error L[0-9]+[ ]*: '_*\\([^']+\\)' : unresolved external" file token
+    build: message "^[^(]+(\\(\\:p\\)) : [^L]+L[124]" file
+    build: message "^LINK [^L]+L[124]"
+    build: message "^ILINK : [^L]+L[124]"
+    build: message "^\\(\\:p\\)(\\(\\:z\\))[ ]*: [^U]+U[124]" file line
+    build: message "^NMAKE : [^U]+U[124]"
+    build: message "^\\:p : [^U]+U[124]\\:d\\:d\\:d"
+    build: message "^pwbrmake: [^U]+U[124]"
+    build: message "^\\(\\:p\\)(\\(\\:z\\)) : [^C]+C[124]" file line
+    build: message "^[^C]+C[124][0-9]+: "
+    build: message "^[^D]+D[124][0-9]+ : "
+    build: message "^BIND : [^U]+U[124]"
+    build: message "^\\(\\:p\\)(\\(\\:z\\)) RC:" file line
+    build: message "^RC: error"
+    build: message "^\\(\\:p\\)(\\(\\:z\\)) : [^F]+F[1234]" file line
+    build: message "^[^F]+F[1234][0-9]+: "
+    build: message "^\\(\\:p\\)(\\([0-9]+\\))[ \t]*:[ \t]*[^A]+A[12456]" file line
+    build: message "^\\(\\:p\\)(\\(\\:z\\)) : [^H]+HI[124]" file line
+    build: message "^[^H]+HI[124][0-9]+: "
+    build: language C
+
+[debug-]
+	target="c:\bible\win\b4w1p3\bib4w1p3.exe"
+	watch=lpProc'00257
+	watch=message'00257
+	watch=wParam'00257
+	watch=lParam'00257
+	watch=lpdis'00257
+[cvw]
+	wndstate=0 1 1 2 0 0 0 1 0 0 254
+	tilestate=1 49 0 80 0 0 0 67 0 10 0 0 0 0 0 0 44 254
+	command=use auto
+	command=n10
+	command=ss1
+	command=ss&
+	command=oc+
+	command=of-
+	command=o3-
+	execheck=Bib4W3p0 796702060
